@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Measurements</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Flower Measurements</h1>
+        <form action="{{url_for('predict')}}" method = 'post'>
+            <div class="form-group">
+                <label for="sepal-length">Sepal Length:</label>
+                <input type="number" id="sepal-length" name="sepal-length" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="sepal-width">Sepal Width:</label>
+                <input type="number" id="sepal-width" name="sepal-width" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="petal-length">Petal Length:</label>
+                <input type="number" id="petal-length" name="petal-length" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="petal-width">Petal Width:</label>
+                <input type="number" id="petal-width" name="petal-width" step="0.1" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
